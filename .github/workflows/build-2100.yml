@@ -4,8 +4,8 @@ on:
   release:
     types: [published]
   push:
-#    tags:
-#    - 'v*'
+    tags:
+    - 'v*'
     branches: 
       - master
   schedule:
@@ -35,7 +35,7 @@ jobs:
         mkdir -p /opt/images/
     - name: Build Firmware
       env:
-        TNAME: "RM2100"
+        TNAME: "RM2100 R2100"
       run: |
         cwd=`pwd`
         CONFIG_TOOLCHAIN_DIR=${cwd//\//\\\/}\\/toolchain-mipsel
